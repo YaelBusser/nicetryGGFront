@@ -1,0 +1,26 @@
+@use "./variables" as vars;
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+// _fonts.scss
+
+// Scroll Bar
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: vars.$main-bg-color;
+  border-radius: 10px 10px 10px 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 10px 10px 10px 10px;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: vars.$primary-font;
+  font-style: normal;
+}
