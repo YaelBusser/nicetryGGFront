@@ -32,6 +32,8 @@ body {
   }
 
   .link {
+    display: flex;
+    gap: 1rem;
     transition: .2s ease;
 
     svg path {
