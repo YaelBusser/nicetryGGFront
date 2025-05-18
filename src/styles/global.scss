@@ -1,6 +1,7 @@
 @use "./variables" as vars;
-@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-// _fonts.scss
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Poetsen+One&display=swap'); // _fonts.scss
 
 // Scroll Bar
 ::-webkit-scrollbar {
@@ -13,7 +14,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: white;
+  background: vars.$primary-color;
   border-radius: 10px 10px 10px 10px;
 }
 
@@ -23,4 +24,26 @@ body {
   padding: 0;
   font-family: vars.$primary-font;
   font-style: normal;
+  background-color: black;
+
+  p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+
+  .link {
+    transition: .2s ease;
+
+    svg path {
+      transition: .2s ease;
+    }
+  }
+
+  .link:hover {
+    color: vars.$primary-color !important;
+
+    svg path {
+      stroke: vars.$primary-color !important;
+    }
+  }
 }

@@ -2,7 +2,6 @@
 
 .container {
   width: 100%;
-  height: 100vh;
   z-index: 1;
 
   .content {
@@ -15,6 +14,18 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      background-color: black;
+
+      .gradient {
+        background: #FFFFFF;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 75%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+      }
 
       .hero {
         position: absolute;
@@ -24,18 +35,190 @@
         bottom: 0;
         width: 100%;
         height: 100%;
+        user-select: none;
+        pointer-events: none;
         z-index: 1;
+        object-fit: cover;
       }
 
       .contentBanner {
-        z-index: 2;
-        color: white;
-        .mainText {
-          font-size: 4rem;
-          span {
-            color: vars.$primary-color;
-            font-family: vars.$secondary-font;
+        width: 100%;
+        height: 30%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+
+        .leftBanner {
+          width: 50%;
+          z-index: 2;
+
+          .contentLeftBanner {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: start;
+            color: white;
+            gap: 1rem;
+
+
+            .mainText {
+              font-size: 4rem;
+
+              span {
+                color: vars.$primary-color;
+                font-family: vars.$secondary-font;
+              }
+            }
           }
+
+          .descriptionBanner {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            p {
+              display: flex;
+              justify-content: start;
+              align-items: center;
+              font-size: 1.5rem;
+              gap: 1rem;
+              line-height: 20px;
+
+              svg {
+                width: 1.5rem;
+                height: 1.5rem;
+              }
+            }
+          }
+        }
+
+        .rightBanner {
+          z-index: 2;
+          width: 30%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .contentRightBanner {
+
+            button {
+              font-size: 1.5rem;
+            }
+          }
+        }
+
+      }
+
+      .bottomElements {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 2rem;
+        z-index: 2;
+        display: flex;
+        justify-content: end;
+        width: 100%;
+        height: 50vh;
+
+        .heroScreens {
+          height: 90%;
+          margin-right: 5rem;
+          z-index: 2;
+        }
+
+        .bandeauDefile {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          z-index: 1;
+
+          .gradientGames {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 1) 100%);
+            z-index: 2;
+          }
+        }
+      }
+    }
+
+    .howWorks {
+      color: white;
+      width: 100%;
+      padding-bottom: 25rem;
+      position: relative;
+
+      .title {
+        font-size: 3rem;
+
+        span {
+          font-family: vars.$secondary-font;
+          color: vars.$primary-color;
+        }
+      }
+
+      .howWorksContent {
+        display: flex;
+        justify-content: center;
+
+        .howWorksText {
+          width: 75%;
+          padding-top: 1rem;
+          padding-bottom: 10rem;
+
+          .howWorksTextContainer {
+            display: grid;
+            grid-template-columns: repeat(2, 30% 70%);
+
+            .howWorksTextSvg {
+              display: flex;
+              justify-content: center;
+              align-items: start;
+              grid-column: 1;
+              margin-top: 3rem;
+
+              svg {
+                width: 7rem;
+              }
+            }
+
+            .howWorksTextContent {
+              grid-column: 2;
+              margin-top: 3rem;
+
+              .howWorksTitle {
+                font-size: 2.2rem;
+              }
+
+              .howWorksDescription {
+                font-size: 1.5rem;
+                font-weight: 200;
+              }
+            }
+
+            .howWorksTitleMain {
+              margin-bottom: 2rem;
+            }
+          }
+        }
+
+        .heroBottom {
+          position: absolute;
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          right: 0;
         }
       }
     }

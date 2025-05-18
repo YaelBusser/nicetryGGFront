@@ -1,0 +1,16 @@
+@use "../../../styles/variables" as vars;
+
+.container{
+  border: none;
+  outline: none;
+  background-color: vars.$bg-primary-color;
+  cursor: pointer;
+  padding: 1rem 3rem;
+  border-radius: 20px;
+  font-weight: 500;
+  font-family: vars.$primary-font;
+
+  span{
+    font-weight: bold;
+  }
+}

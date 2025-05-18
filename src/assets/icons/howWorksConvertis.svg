@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   viewBox="0 0 38.099998 38.099998"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   sodipodi:docname="howWorksConvertis.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.72426347"
+     inkscape:cx="-35.898539"
+     inkscape:cy="61.441729"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <rect
+       x="261.68951"
+       y="268.16699"
+       width="82.91153"
+       height="61.319988"
+       id="rect4-7-6-9" />
+  </defs>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-114.30001,-132.29166)">
+    <text
+       xml:space="preserve"
+       id="text4-8-2-7"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.0021px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect4-7-6-9);display:inline;fill:#f6ba1a;fill-opacity:1;stroke:none;stroke-width:0.0897817;stroke-dasharray:none;stroke-opacity:1"
+       transform="matrix(1.0581914,0,0,1.0581914,-148.02822,-141.62354)"><tspan
+         x="261.68945"
+         y="282.58193"
+         id="tspan2">€</tspan></text>
+    <circle
+       cx="133.35001"
+       cy="151.34166"
+       r="18.917707"
+       fill="#0d0d0d"
+       stroke="#f6ba1a"
+       id="circle4"
+       style="fill:none;stroke-width:0.264583" />
+  </g>
+</svg>

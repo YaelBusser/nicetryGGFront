@@ -1,10 +1,22 @@
 .container {
   width: 100%;
-  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 5rem;
   background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all .2s ease;
+  border-radius: 0;
+
+  &.shrink {
+    margin-top: 1rem;
+    width: 80%;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+  }
 
   .content {
     width: 85%;
@@ -14,36 +26,29 @@
     align-items: center;
     color: white;
 
-    .logo {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-      gap: 1rem;
-
-      svg {
-        width: 2rem;
-        height: 2rem;
-      }
-
-      .title {
-        font-size: 2rem;
-        font-weight: bold;
-        text-transform: uppercase;
-      }
-    }
-
     nav {
       display: flex;
       justify-content: space-between;
-      width: 70%;
+      width: 30%;
       font-weight: 300;
       text-transform: uppercase;
 
-      p{
+      p {
         cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        line-height: 0;
+
+        svg {
+          width: 1.5rem;
+        }
+      }
+
+      .iconProfile svg {
+        width: 1.1rem;
       }
     }
   }
-
 }

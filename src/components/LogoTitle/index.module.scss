@@ -1,0 +1,19 @@
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  gap: 1rem;
+  color: white;
+
+  svg {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
