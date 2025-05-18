@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 import styles from "./index.module.scss";
 import Trophy from "../../assets/icons/trophy.svg";
 import Boutique from "../../assets/icons/boutique.svg";
@@ -7,6 +7,7 @@ import LogoTitle from "../LogoTitle/index.jsx";
 
 const HeaderNav = () => {
     const [isScrolled, setIsScrolled] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => setIsScrolled(window.scrollY > 0);
@@ -15,16 +16,24 @@ const HeaderNav = () => {
     }, []);
 
     return (
-        <div className={`${styles.container} ${isScrolled ? styles.shrink : ""}`}>
+        <header className={`${styles.container} ${isScrolled ? styles.shrink : ""}`}>
             <div className={styles.content}>
-                <LogoTitle />
-                <nav>
-                    <p className={"link"}><Trophy /> tournois</p>
-                    <p className={"link"}><Boutique /> boutique</p>
-                    <p className={`link ${styles.iconProfile}`}><Profile /> s'inscrire</p>
+                <LogoTitle/>
+                <div
+                    className={`${styles.burger} ${menuOpen ? styles.open : ""}`}
+                    onClick={() => setMenuOpen(!menuOpen)}
+                >
+                    <span/>
+                    <span/>
+                    <span/>
+                </div>
+                <nav className={`${styles.nav} ${menuOpen ? styles.show : ""}`}>
+                    <p className="link"><Trophy/> tournois</p>
+                    <p className="link"><Boutique/> boutique</p>
+                    <p className={`link ${styles.iconProfile}`}><Profile/> s'inscrire</p>
                 </nav>
             </div>
-        </div>
+        </header>
     );
 };
 

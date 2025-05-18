@@ -1,19 +1,19 @@
+@use "../../styles/variables" as vars;
+
 .container {
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
   height: 5rem;
-  background-color: black;
+  background: black;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: all .2s ease;
-  border-radius: 0;
 
   &.shrink {
     margin-top: 1rem;
     width: 80%;
-    background-color: transparent;
+    background: rgba(0, 0, 0, .4);
     backdrop-filter: blur(10px);
     border-radius: 20px;
   }
@@ -25,30 +25,113 @@
     justify-content: space-between;
     align-items: center;
     color: white;
+    position: relative;
+  }
+}
 
-    nav {
-      display: flex;
-      justify-content: space-between;
-      width: 30%;
-      font-weight: 300;
-      text-transform: uppercase;
+/* ---------- Burger ---------- */
+.burger {
+  --line-w: 2rem;
+  --line-h: .2rem;
+  --gap: .4rem;
 
-      p {
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-        line-height: 0;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: var(--line-w);
+  height: calc(var(--line-h) * 3 + var(--gap) * 2);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 30;
 
-        svg {
-          width: 1.5rem;
-        }
-      }
+  span {
+    width: 100%;
+    height: var(--line-h);
+    background: white;
+    transition: transform .3s ease, opacity .3s ease;
+  }
 
-      .iconProfile svg {
-        width: 1.1rem;
-      }
+  &.open {
+    span:nth-child(1) {
+      transform: translateY(var(--gap)+var(--line-h)) rotate(45deg);
+    }
+
+    span:nth-child(2) {
+      opacity: 0;
+    }
+
+    span:nth-child(3) {
+      transform: translateY(calc(-1 * (var(--gap) + var(--line-h)))) rotate(-45deg);
+    }
+  }
+}
+
+/* ---------- Navigation ---------- */
+.nav {
+  display: flex;
+  gap: 2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+
+  p {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+
+    svg {
+      width: 1.5rem;
+    }
+  }
+
+  .iconProfile svg {
+    width: 1.1rem;
+  }
+
+  /* mobile : caché par défaut */
+  &.show {
+    right: 0;
+  }
+}
+
+/* ------------------ Responsive ------------------ */
+
+/* Tablette / Desktop (≥ 900 px) */
+@media (min-width: 900px) {
+  .burger {
+    display: none;
+  }
+  .nav {
+    position: static;
+    flex-direction: row;
+    background: none;
+    width: 30rem;
+  }
+}
+
+/* Téléphone (< 900 px) */
+@media (max-width: 899px) {
+  .burger {
+    display: flex;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%; /* caché hors écran */
+    flex-direction: column;
+    background: rgba(0, 0, 0, .95);
+    width: 70%;
+    height: 100vh;
+    padding: 6rem 2rem;
+    gap: 2rem;
+    transition: right .3s ease;
+    z-index: 20;
+
+    p {
+      font-size: 1.5rem;
     }
   }
 }
